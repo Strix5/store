@@ -27,6 +27,7 @@ class OrdersListView(CommonMixin, ListView):
     title = 'Store - Orders'
     template_name = 'orders/orders.html'
     queryset = Order.objects.all()
+    context_object_name = 'orders'
 
     def get_queryset(self):
         queryset = super(OrdersListView, self).get_queryset()

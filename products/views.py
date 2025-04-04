@@ -1,8 +1,9 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import HttpResponseRedirect, render
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, DetailView
 from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
-# from django.views.generic.detail import DetailView
 
 from common.views import CommonMixin
 
@@ -37,13 +38,11 @@ class ProductsListView(CommonMixin, ListView):
         return queryset.filter(category_id=category_id) if category_id else queryset
 
 
-
-def product_view(request, product_id):
-    context = {
-        'product': Product.objects.get(id=product_id),
-        'title': 'Product Info',
-        }
-    return render(request, 'products/product_info.html', context)
+class ProductDetailView(CommonMixin, DetailView):
+    title = 'Product Info'
+    template_name = 'products/product_info.html'
+    model = Product
+    context_object_name = 'product'
 
 
 @login_required

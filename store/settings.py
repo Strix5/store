@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 
     'allauth',
     'allauth.account',
-    # 'allauth.socialaccount',
+    'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
     'debug_toolbar',
 
@@ -105,12 +105,13 @@ DATABASES = {
     }
 }
 
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'store_db',
-#         'USER': 'strix',
-#         'PASSWORD': 'Atashka2003',
+#         'NAME': '...',
+#         'USER': '...',
+#         'PASSWORD': '...',
 #         'HOST': 'localhost',
 #         'PORT': 5432,
 #     }

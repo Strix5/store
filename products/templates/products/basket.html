@@ -1,10 +1,19 @@
 {% load humanize %}
 
+{% block css %}
+<style>
+    .card-img-top {
+        height: 60%;
+        width: 60%
+    }
+</style>
+{% endblock %}
+
 
 {% if basket %}
 <div class="col-lg-5">
     <h4 class="mt-3 mb-3 text-center">
-        Корзина <span class="badge badge-secondary badge-pill"> {{ basket.total_quantity }} </span>
+        &#128722 Корзина <span class="badge badge-secondary badge-pill"> {{ basket.total_quantity }} </span>
     </h4>
     {% for item in basket %}
     <div class="card mb-3">
@@ -25,7 +34,7 @@
                     <div class="col-lg-4">{{ item.product.price | intcomma }} TMT <br> Sum: {{ item.sum |intcomma }}</div>
                     <div class="col-lg-4">
                         <a href="{% url 'products:basket_remove' item.id %}">
-                            <i class="fas fa-trash"></i>
+                            <i class="fas fa-trash"></i>Delete
                         </a>
                     </div>
                 </div>
