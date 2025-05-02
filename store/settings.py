@@ -176,8 +176,8 @@ DOMAIN_NAME = 'http://127.0.0.1:8000/'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'storestrix@yandex.ru'
-EMAIL_HOST_PASSWORD = 'zdcdkkwrtwrwilfk'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
 
@@ -198,17 +198,17 @@ EMAIL_USE_TLS = False
 # }
 
 # Stripe
-STRIPE_PUBLIC_KEY = \
-    'pk_test_51OQTYbBnyEYPA4JSsX9GLaIIbdRhiAxib7KWvd0aMqSUhozSyBxQ79kKR92odDAFBr1CFdBNlbtwV4KCTjherwvX00KkloBkVT'
-STRIPE_SECRET_KEY = \
-    'sk_test_51OQTYbBnyEYPA4JSPmzsWgIcte5qvezcyUrgnxnRywwvecQ6fn69ojn4gw6sw5dZ59Yr4JwB696Ey67jQwdG1U6p00brMa4zmm'
-STRIPE_WEBHOOK_SECRET = 'whsec_315cd16a2921c6e1e4ee4b1d722333266cd5c6aa753b489f6925b771aa9244ee'
+# STRIPE_PUBLIC_KEY = \
+#     'pk_test_51OQTYbBnyEYPA4JSsX9GLaIIbdRhiAxib7KWvd0aMqSUhozSyBxQ79kKR92odDAFBr1CFdBNlbtwV4KCTjherwvX00KkloBkVT'
+# STRIPE_SECRET_KEY = \
+#     'sk_test_51OQTYbBnyEYPA4JSPmzsWgIcte5qvezcyUrgnxnRywwvecQ6fn69ojn4gw6sw5dZ59Yr4JwB696Ey67jQwdG1U6p00brMa4zmm'
+# STRIPE_WEBHOOK_SECRET = 'whsec_315cd16a2921c6e1e4ee4b1d722333266cd5c6aa753b489f6925b771aa9244ee'
 
 # Django REST framework
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 3,
+    'PAGE_SIZE': 10,
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
     ]
